@@ -1,6 +1,10 @@
 # Performance of Distillation Protocols
 In this project we analyze the performance of different distillation protocols: BBPSSW, DEJMPS and EPL in the presence of environmental noise (depolarization) and gate errors, using the Netsquid simulator. An analysis of the results is provided in Calero_Mishra_Kumar.pdf.
 
+# Requirements
+- [netqasm](https://pypi.org/project/netqasm/)
+- [NetSquid](https://netsquid.org/#registration)
+
 # run.py
 This is the main file to run simulations. It executes the shell file script.sh
 # script.sh
