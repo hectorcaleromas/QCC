@@ -1,0 +1,72 @@
+GNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+[New LWP 6429]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f178eabc1e8 in _fini () from /home/cs4090/CS4090/venv/lib/python3.10/site-packages/scipy/sparse/csgraph/_traversal.cpython-310-x86_64-linux-gnu.so
+
+Stack backtrace
+---------------
+   from /home/cs4090/CS4090/venv/lib/python3.10/site-packages/scipy/sparse/csgraph/_traversal.cpython-310-x86_64-linux-gnu.so
+No symbol table info available.
+#1  0x00007f17a5d41274 in _dl_fini () at ./elf/dl-fini.c:147
+        l = 0x55e13952ae70
+        maps = 0x7ffd2e082020
+        i = 48
+        l = <optimized out>
+        nmaps = <optimized out>
+        nloaded = <optimized out>
+        ns = 0
+        do_audit = <optimized out>
+        __PRETTY_FUNCTION__ = "_dl_fini"
+#2  0x00007f17a5a15495 in __run_exit_handlers (status=1, 
+    listp=0x7f17a5be9838 <__exit_funcs>, 
+    run_list_atexit=run_list_atexit@entry=true, run_dtors=run_dtors@entry=true)
+    at ./stdlib/exit.c:113
+        atfct = <optimized out>
+        onfct = <optimized out>
+        cxafct = <optimized out>
+        arg = 0x0
+        f = <optimized out>
+        new_exitfn_called = <optimized out>
+        cur = 0x7f17a5beaf00 <initial>
+#3  0x00007f17a5a15610 in __GI_exit (status=<optimized out>)
+    at ./stdlib/exit.c:143
+No locals.
+#4  0x00007f17a59f9d97 in __libc_start_call_main (
+    main=main@entry=0x55e1378ca310, argc=argc@entry=3, 
+    argv=argv@entry=0x7ffd2e082638)
+    at ../sysdeps/nptl/libc_start_call_main.h:74
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, 8781694472855754011, 
+                140725375739448, 94425787966224, 94425791326328, 
+                139739543326784, -8780747652893371109, -8650971062557076197}, 
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, 
+            data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+#5  0x00007f17a59f9e40 in __libc_start_main_impl (main=0x55e1378ca310, argc=3, 
+    argv=0x7ffd2e082638, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffd2e082628)
+    at ../csu/libc-start.c:392
+No locals.
+#6  0x000055e1378ca245 in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[Inferior 1 (process 6421) detached]
+Traceback (most recent call last):
+  File "<string>", line 25, in <module>
+ModuleNotFoundError: No module named 'Cython'
+Error while executing Python code.
